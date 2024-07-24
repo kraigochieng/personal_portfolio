@@ -1,11 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kraig Ochieng Portfolio</title>
-</head>
-<body>
-    Hi from Kraig
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Kraig Ochieng's Portfolio</title>
+
+		{% set head_links = [ {'rel': 'stylesheet', 'href': url_for('static',
+		path='css/styles.css')}, {'rel': 'icon', 'href': url_for('static',
+		path='images/favicon.ico')} ]%} {% for link in head_links %}
+		<link href="{{ link.href }}" rel="{{ link.rel }}" />
+		{% endfor %}
+	</head>
+	<body>
+		<div id="bio">
+			<h1>Kraig Ochieng</h1>
+			<img
+				id="bio-photo"
+				src="{{ url_for('static', path='images/bio_photo.jpg') }}"
+				alt="Bio Photo"
+			/>
+		</div>
+		<div id="projects">
+			<h3 id="projects__header">Projects</h3>
+			<div id="projects__list">
+				<h4>Image to ASCII Art Generator</h4>
+				<p>
+					The project takes a normal image and returns back the ASCII
+					form of the image for download
+				</p>
+				<div id="preview">
+					<div id="preview__images">
+						{% set images = [ {'src': url_for('static',
+						path='images/image-to-ascii/desktop.png'), 'alt':"Image
+						to ASCII Art Generator"}, {'src': url_for('static',
+						path='images/image-to-ascii/mobile.png'), 'alt':"Image
+						to ASCII Art Generator"} ]%} {% for image in images %}
+						<img src="{{ image.src }}" alt="{{ image.alt }}" />
+						{% endfor %}
+					</div>
+				</div>
+				<div class="tools-used">
+					<p class="tools-used__header">Tools Used</p>
+					<ul id="tools-used__list" class="plain_list">
+						{% set badgeWidth = "32" %} {% set badgeStyle =
+						"style-for-the-badge" %} {% set badges = [ {'name':
+						'Python', 'color': 'white', 'logo': 'Python'}, {'name':
+						'FastAPI', 'color': 'white', 'logo': 'FastAPI'},
+						{'name': 'HTML5', 'color': 'white', 'logo': 'HTML5'},
+						{'name': 'CSS3', 'color': 'white', 'logo': 'CSS3',
+						'logoColor': 'blue'}, {'name': 'JavaScript', 'color':
+						'white', 'logo': 'JavaScript'} ] %} {% for badge in
+						badges %}
+						<li>
+							<img
+								alt="{{ badge.name }}"
+								src="https://img.shields.io/badge/{{ badge.name }}-{{ badge.color }}?logo={{ badge.logo }}&logoWidth={{logoWidth}}&style={{badgeStyle}}"
+							/>
+						</li>
+						{% endfor %}
+					</ul>
+				</div>
+				<a href="https://image-to-ascii-2.onrender.com" target="_blank"
+					>Live Project</a
+				>
+				<a
+					href="https://github.com/kraigochieng/image_to_ascii"
+					target="_blank"
+					>Code</a
+				>
+			</div>
+		</div>
+		<div id="socials">
+			<p></p>
+			<ul id="socials__list" class="plain_list">
+				<li>
+					<a
+						href="https://www.linkedin.com/in/kraig-ochieng-911121215/"
+					>
+						<img
+							class="socials__logo"
+							src="{{ url_for('static', path='images/linkedin.svg') }}"
+							alt="LinkedIn"
+						/>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</body>
 </html>
