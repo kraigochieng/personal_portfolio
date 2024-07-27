@@ -1,0 +1,14 @@
+{% macro tool_used(alt, src) %}
+    <div class="tools-used__list__item">
+        <img class="socials__icon" alt="{{ alt }}" src="{{ src }}" />
+        <p>
+            {{ alt }}
+        </p>
+    </div>
+{% endmacro %}
+
+{% macro preview_image(alt, src, orientation) %}
+    <img class="preview__image__item {{ orientation }}"
+         src="{{ src }}"
+         alt="{{ alt }}" />
+{% endmacro %}
