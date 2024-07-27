@@ -1,0 +1,15 @@
+.menu__open-button__bar {
+	@apply w-[32px] h-[8px] bg-black transition-[0.4s] mx-0 my-[1px] border rounded-lg;
+}
+
+/* .change .menu__open-button__bar1 {
+	@apply translate-x-0 translate-y-[11px] -rotate-45;
+}
+
+.change .menu__open-button__bar2 {
+	@apply opacity-0;
+}
+
+.change .menu__open-button__bar3 {
+	@apply translate-x-0 translate-y-[-11px] rotate-45;
+} */

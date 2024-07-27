@@ -1,0 +1,52 @@
+@import "./preview.css";
+@import "./tools_used.css";
+@import "./menu_icon.css";
+@import "./menu.css";
+
+@font-face {
+	font-family: "Inter";
+	src: url("../fonts/Inter/Inter-VariableFont_slnt,wght.ttf");
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	@apply box-border p-0 m-0 font-inter outline outline-0 outline-red-500;
+}
+
+/* :root {
+	font-size: 24px;
+} */
+html {
+	@apply scroll-smooth;
+}
+
+h1 {
+	@apply text-4xl font-bold p-24;
+}
+
+h2 {
+	@apply text-4xl font-bold p-20;
+}
+
+h3 {
+	@apply text-3xl font-bold p-16;
+}
+
+h4 {
+	@apply text-2xl font-bold p-12;
+}
+
+h5 {
+	@apply text-xl font-bold p-8;
+}
+
+h6 {
+	@apply text-lg font-bold p-4;
+}
+
+.socials__icon {
+	@apply w-12;
+}

@@ -1,0 +1,27 @@
+.overlay {
+	@apply h-[0%] w-full fixed z-[1] bg-black bg-[rgba(0,0,0,0.9)] overflow-y-hidden transition-[0.5s] left-0 top-0;
+}
+.menu__list {
+	@apply relative w-full text-center mt-[30px] top-1/4;
+}
+.overlay a {
+	@apply no-underline text-4xl text-[#818181] block transition-[0.3s] p-2;
+}
+.overlay a:hover,
+.overlay a:focus {
+	@apply text-[#f1f1f1];
+}
+.overlay .closebtn {
+	@apply absolute text-6xl right-[45px] top-5;
+}
+@media screen and (max-height: 450px) {
+	.overlay {
+		@apply overflow-y-auto;
+	}
+	.overlay a {
+		@apply text-xl;
+	}
+	.overlay .closebtn {
+		@apply text-[40px] right-[35px] top-[15px];
+	}
+}

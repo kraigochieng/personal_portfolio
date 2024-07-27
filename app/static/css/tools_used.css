@@ -1,0 +1,7 @@
+.tools-used__list {
+    @apply flex flex-wrap gap-2;
+}
+
+.tools-used__list__item {
+    @apply flex p-4 gap-x-2;
+}

@@ -1,0 +1,10 @@
+.preview__images {
+	@apply flex flex-wrap;
+}
+
+.preview__image__item.potrait {
+	@apply h-96;
+}
+.preview__image__item.landscape {
+	@apply w-full md:w-2/3 lg:w-1/2 xl:w-1/3;
+}
